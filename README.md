@@ -1,2 +1,2 @@
 # singleSignOn
-Single Sign On
+Single Sign On project
