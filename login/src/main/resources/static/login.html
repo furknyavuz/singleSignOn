@@ -1,0 +1,30 @@
+<!-- Login component -->
+<div class="row" ng-controller="loginController" ng-init="credentialMismatch=false">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Please login</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <form action="/" id="login">
+                    <div class="form-group">
+                        <p>Username: </p>
+                        <input ng-model="username" type="text" id="username">
+                        <br>
+                        <p>Password: </p>
+                        <input ng-model="password" type="password" id="password">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <button type="button" ng-click="submit()" class="btn btn-success">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="warning ui-state-error ui-corner-all" ng-show="credentialMismatch" style="padding: 15px; display: block;">
+        <p><span class="ui-icon ui-icon-alert" style="float: left; margin-top:2px; margin-right:8px;"></span>
+            <strong>Error:</strong> Please check you credentials!</p>
+    </div>
+</div>
