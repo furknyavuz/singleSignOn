@@ -1,0 +1,59 @@
+version: 1
+
+dn: dc=example,dc=com
+objectclass: top
+objectclass: domain
+dc: example
+
+dn: o=organization,dc=example,dc=com
+objectClass: organization
+objectClass: top
+o: organization
+
+dn: ou=groups,o=organization,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: groups
+
+dn: ou=users,o=organization,dc=example,dc=com
+objectClass: organizationalUnit
+objectClass: top
+ou: users
+
+dn: cn=Furkan Yavuz,ou=users,o=organization,dc=example,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Furkan Yavuz
+sn: Yavuz
+uid: user
+userPassword:: e1NTSEF9bFI1a0R1eWVHU01QT0pDRS9Md2gyOFgrcXVoWTdibFl4L0dJN2c9P
+ Q==
+
+dn: cn=Simple User,ou=users,o=organization,dc=example,dc=com
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Simple User
+sn: User
+uid: suser
+userPassword:: e1NTSEF9NXNxS3VKOWRTWGU5Nlg2V3YxOURIUlhxZDVIdERIemN2LzIvREE9P
+ Q==
+
+dn: cn=User,ou=groups,o=organization,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: User
+uniqueMember: cn=Furkan Yavuz,ou=users,o=organization,dc=example,dc=com
+uniqueMember: cn=Simple User,ou=users,o=organization,dc=example,dc=com
+
+dn: cn=Admin,ou=groups,o=organization,dc=example,dc=com
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: Admin
+uniqueMember: cn=Furkan Yavuz,ou=users,o=organization,dc=example,dc=com
+
+
+
